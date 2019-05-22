@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Pagina alternativa</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 
+        *** Note: prefer use percentage values if grid or flex cannot be used ***
+        *** Percentage values may be considered magic values, but they are the *
+        * core concepts behind grid and flex bahavior ***
+        *** This example is unresponsible due the lack of purpose to use display table in this case
+        * Note: I hate wrappers!!! By the way, we need that trick despite the lack of colspan/rolspan 
+          rules on css tables. ***
+        
+        -->
+    <style type="text/css">
+        body {
+            margin: 0px;
+            height: 100vh;
+            width: 100%;
+            color: gold;
+            text-align: center;
+        }
+        .box1 {
+            background-color: blue;
+            min-height: 15%;
+            width: 100%;
+        }
+        /*Here comes new rules for main content groups! 
+Whole heigh here is the remaining space on viewport*/
+        .wrapper {
+            display: table;
+            width: 100%;
+            height: 75%;
+        }
+        .box2 {
+            display: table-cell;
+            background-color: brown;
+            width: 20%;
+        }
+        .box3 {
+            display: table-cell;
+            background-color: cornflowerblue;
+        }
+        .box4 {
+            display: table-cell;
+            background-color: darkred;
+            width: 20%;
+        }
+        .box5 {
+            background-color: green;
+            min-height: 10%;
+        }
+    </style>
+</head>
+
+<body>
+    <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+    <div class="box1">Header <div class="teste">teste</div>
+    </div>
+    <div class="wrapper">
+        <div class="box2">Left-Sidebar</div>
+        <div class="box3">Center</div>
+        <div class="box4">Right-sidebar</div>
+    </div>
+    <div class="box5">Footer</div>
+    <script src="" async defer></script>
+</body>
+
+</html>
