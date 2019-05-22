@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+    <style>
+        body {
+            height: 100vh;
+            margin: 0px;
+        }
+        /*NOTE: For some odd reason, child selector are required to apply flex this behaviors*/
+        .wrapper {
+            display: flex;
+            flex-flow: row wrap;
+            text-align: center;
+        }
+        .wrapper > * {
+            /*Set behavior to all wrapped items*/
+            flex: 1 100%;
+            min-height: 20vh;
+        }
+        header {
+            background-color: aqua
+        }
+        .left-side {
+            background-color: darkorchid
+        }
+        main {
+            background-color: dodgerblue
+        }
+        .right-side {
+            background-color: darkslategray;
+        }
+        footer {
+            background-color: gold
+        }
+        @media all and (min-width: 601px) {
+            .left-side,
+            .right-side {
+                flex: 1 auto;
+            }
+            .wrapper>main {
+                min-height: 40vh;
+            }
+            @media all and (min-width: 801px) {
+                .wrapper>main,
+                .left-side,
+                .right-side {
+                    flex: 1 auto;
+                    min-height: 60vh;
+                }
+                .wrapper>main {
+                    flex: 2 0px;
+                }
+                .left-side {
+                    order: 1;
+                }
+                main {
+                    order: 2;
+                }
+                .right-side {
+                    order: 3;
+                }
+                footer {
+                    order: 4;
+                }
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+    <div class="wrapper">
+        <header>
+            1 - header: Imagine a beautiful logo :)
+        </header>
+        <main>2 - Content goes here !!!
+            <br><br>
+            this is just one of many ways to use flexbox. Feel free to change it if necessary !
+        </main>
+        <aside class="left-side">3 - One type of content</aside>
+        <aside class="right-side">4 -Maybe one nice ad ! </aside>
+        <footer>&copy; 2019 nails and fingers!</footer>
+    </div>
+</body>
+</html>
