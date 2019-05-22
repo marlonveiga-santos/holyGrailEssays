@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Pagina alternativa</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- 
+        *** Note: prefer use percentage values if grid or flex cannot be used ***
+        *** Percentage values may be considered magic values, but they are the *
+        * core concepts behind grid and flex bahavior ***
+        *** Below the way to use on external files w/ same media behaviors
+        <link rel="stylesheet" media="(max-width: 600px)" href="css/style.css" />
+        <link rel="stylesheet" media="(min-width: 601px)" href="css/style2.css">
+        -->
+    <style type="text/css">
+        @media (max-width: 600px) {
+            html,
+            body {
+                height: 100%;
+                margin: 0px;
+            }
+            .box1 {
+                background-color: aquamarine;
+                min-height: 100%;
+            }
+            .box2 {
+                background-color: khaki;
+                min-height: 110%;
+            }
+            .box3 {
+                background-color: navy;
+                min-height: 110%;
+            }
+            .nova {
+                background-color: silver;
+                min-height: 110%;
+            }
+            .box4 {
+                background-color: rebeccapurple;
+                min-height: 100%;
+            }
+        }
+        @media (min-width: 601px) {
+            html,
+            body {
+                height: 100%;
+                margin: 0px;
+            }
+            .box1 {
+                background-color: aquamarine;
+                min-height: 10%;
+            }
+            .box2 {
+                background-color: khaki;
+                min-height: 80%;
+                width: 23%;
+                float: left;
+            }
+            .box3 {
+                position: relative;
+                background-color: navy;
+                min-height: 80%;
+                width: 54%;
+                float: left;
+            }
+            .nova {
+                background-color: silver;
+                min-height: 80%;
+                width: 23%;
+                float: right;
+            }
+            .box4 {
+                clear: both;
+                background-color: rebeccapurple;
+                min-height: 10%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+    <div class="box1">a</div>
+    <div class="box2">b</div>
+    <div class="box3">c</div>
+    <div class="nova">New Box</div>
+    <div class="box4">d</div>
+    <script src="" async defer></script>
+</body>
+
+</html>
